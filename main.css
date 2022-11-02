@@ -73,7 +73,6 @@ body {
 #wrapper #main {
   width: 90%;
   margin: 0 5rem;
-  position: relative;
 }
 
 #wrapper #main .user-nav {
@@ -223,12 +222,78 @@ body {
 }
 
 #wrapper #main .appraise-btn {
-  position: absolute;
-  bottom: 5rem;
-  right: 0rem;
+  float: right;
   transition: all 200ms ease;
 }
 
 #wrapper #main .appraise-btn:hover {
   transform: translateY(-5px);
+}
+
+/** Modal */
+.qr-modal {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  max-width: 360px;
+  /* margin: 0 auto; */
+}
+
+.qr-body {
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.qr-body h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.qr-code {
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.qr-code img {
+  width: 100%;
+  height: auto;
+}
+
+.qr-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/** Overlay */
+.overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/** JS */
+.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }

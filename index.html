@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>Elevsys</title>
   </head>
   <body>
@@ -179,6 +179,7 @@
                   </defs>
                 </svg>
                 <svg
+                  class="qr-toggle"
                   width="44"
                   height="44"
                   viewBox="0 0 44 44"
@@ -197,6 +198,40 @@
                     fill="black"
                   />
                 </svg>
+                <div class="overlay" id="overlay"></div>
+                <div class="qr-modal" id="qr-modal">
+                  <button class="qr-close" id="close-btn">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.46445 15.5354L15.5355 8.46436"
+                        stroke="#737373"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M8.46446 8.46458L15.5355 15.5356"
+                        stroke="#737373"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="qr-body">
+                    <h3>Scan to visit page</h3>
+                    <div class="qr-code">
+                      <img
+                        src="assets/qr-code.svg"
+                        alt="Scan code to visit the art"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <svg
                   width="44"
                   height="44"
@@ -338,5 +373,7 @@
         </a>
       </main>
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
