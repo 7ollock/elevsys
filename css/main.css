@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --pink: #fa00ff;
+  --white: #ffffff;
+  --black: #151515;
+  --grey-1: #737373;
+  --grey-2: #dddddd;
+
+  --linear: linear-gradient(180deg, #f797ff 0%, #ba6bf8 50.52%, #00ffd1 100%);
+}
+
+*,
+*::before,
+*::after {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  background-color: var(--white);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  width: 100%;
+  min-height: 100vh;
+}
+
+#wrapper {
+  max-width: 1240px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--white);
+  display: flex;
+}
+
+#wrapper #sidebar {
+  width: 10%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 0.5px solid var(--grey-2);
+}
+
+#wrapper #sidebar .logo {
+  margin-top: 7rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: var(--linear);
+}
+
+#wrapper #sidebar #sidebar-nav {
+  margin: 9rem 0;
+}
+
+#wrapper #sidebar #sidebar-nav .nav-item {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+#wrapper #main {
+  width: 90%;
+  margin: 0 5rem;
+  position: relative;
+}
+
+#wrapper #main .user-nav {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid var(--grey-2);
+}
+
+#wrapper #main .user-nav .pages {
+  display: flex;
+}
+
+#wrapper #main .user-nav .pages li {
+  margin-right: 4rem;
+  list-style: none;
+}
+
+#wrapper #main .user-nav .pages li a,
+#wrapper #main .user-nav .profile-menu {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--black);
+}
+
+#wrapper #main .user-nav .pages li a:hover {
+  color: var(--grey-1);
+}
+
+#wrapper #main .user-nav .pages li a.visited {
+  color: var(--grey-1);
+}
+
+#wrapper #main .user-nav .profile-menu {
+  font-weight: 500;
+  color: var(--pink);
+}
+
+#wrapper #main .user-nav .profile-menu svg {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+#wrapper #main .art-info {
+  margin-top: 2rem;
+}
+
+#wrapper #main .art-info .art-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+#wrapper #main .art-info .header {
+  display: flex;
+  align-items: center;
+}
+
+#wrapper #main .art-info .header .art-main-img {
+  width: 70%;
+}
+
+#wrapper #main .art-info .header .art-main-img img {
+  width: 100%;
+  height: auto;
+}
+
+#wrapper #main .art-info .header .art-summary {
+  width: 30%;
+  margin-left: 4rem;
+}
+
+#wrapper #main .art-info .header .art-summary .summary-item {
+  margin-bottom: 3rem;
+}
+
+#wrapper #main .art-info .header .art-summary .summary-item h5 {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--grey-1);
+}
+
+#wrapper #main .art-info .header .art-summary .summary-item p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+#wrapper #main .art-info .header .art-summary .icons svg {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+#wrapper #main .art-info .header .art-summary .icons svg:hover {
+  transform: translateY(-3px);
+}
+
+#wrapper #main .art-info .details {
+  margin-top: 3rem;
+}
+
+#wrapper #main .art-info .details .detail-nav {
+  display: flex;
+}
+
+#wrapper #main .art-info .details .detail-nav li {
+  list-style: none;
+  margin-right: 3rem;
+  font-size: 1.6rem;
+}
+
+#wrapper #main .art-info .details .detail-nav li a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#wrapper #main .art-info .details .detail-nav li a:hover {
+  color: var(--grey-1);
+}
+
+#wrapper #main .art-info .details .detail-nav li .active {
+  color: var(--grey-1);
+}
+
+#wrapper #main .art-info .details .origin-details-nav {
+  margin-top: 1rem;
+  display: flex;
+}
+
+#wrapper #main .art-info .details .origin-details-nav .item {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+#wrapper #main .art-info .details .origin-details-nav .item p {
+  margin-left: 1rem;
+  color: var(--pink);
+  font-weight: 500;
+}
+#wrapper #main .art-info .details .origin-details-content {
+  margin-top: 2rem;
+}
+
+#wrapper #main .appraise-btn {
+  position: absolute;
+  bottom: 5rem;
+  right: 0rem;
+  transition: all 200ms ease;
+}
+
+#wrapper #main .appraise-btn:hover {
+  transform: translateY(-3px);
+}
