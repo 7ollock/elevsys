@@ -54,7 +54,7 @@ body {
 }
 
 #wrapper #sidebar .logo {
-  margin-top: 7rem;
+  margin-top: 2rem;
   width: 32px;
   height: 32px;
   border-radius: 100px;
@@ -62,7 +62,7 @@ body {
 }
 
 #wrapper #sidebar #sidebar-nav {
-  margin: 9rem 0;
+  margin: 7rem 0;
 }
 
 #wrapper #sidebar #sidebar-nav .nav-item {
@@ -296,4 +296,117 @@ body {
 .is-visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  #wrapper #sidebar {
+    display: none;
+  }
+
+  #wrapper #main {
+    width: 100%;
+    margin: 0 1.6rem;
+  }
+
+  #wrapper #main .user-nav {
+    height: 5rem;
+  }
+
+  #wrapper #main .user-nav .pages li {
+    margin-right: 2rem;
+  }
+
+  #wrapper #main .user-nav .pages li a,
+  #wrapper #main .user-nav .profile-menu {
+    font-size: 1.3rem;
+  }
+
+  #wrapper #main .user-nav .profile-menu {
+    display: none;
+  }
+
+  #wrapper #main .art-info {
+    margin-top: 1rem;
+  }
+
+  #wrapper #main .art-info .art-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  #wrapper #main .art-info .header {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #wrapper #main .art-info .header .art-main-img {
+    width: 100%;
+  }
+
+  #wrapper #main .art-info .header .art-summary {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  #wrapper #main .art-info .header .art-summary .summary-item {
+    margin-bottom: 2rem;
+  }
+
+  #wrapper #main .art-info .header .art-summary .summary-item h5 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--grey-1);
+  }
+
+  #wrapper #main .art-info .header .art-summary .summary-item p {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  #wrapper #main .art-info .details {
+    margin-top: 3rem;
+  }
+
+  #wrapper #main .art-info .details .detail-nav {
+    flex-wrap: wrap;
+  }
+
+  #wrapper #main .art-info .details .detail-nav li {
+    margin-right: 2rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+
+  #wrapper #main .art-info .details .origin-details-nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #wrapper #main .art-info .details .origin-details-nav .item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  #wrapper #main .art-info .details .origin-details-nav .item p {
+    font-size: 1.4rem;
+  }
+  #wrapper #main .art-info .details .origin-details-content {
+    margin-top: 1rem;
+  }
+
+  #wrapper #main .art-info .details .origin-details-content p {
+    font-size: 1.3rem;
+  }
+
+  #wrapper #main .appraise-btn {
+    float: left;
+    margin: 2rem 0;
+  }
 }

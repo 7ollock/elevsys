@@ -11,6 +11,7 @@ qrClose.addEventListener("click", function () {
   document.getElementById("overlay").classList.remove("is-visible");
   document.getElementById("qr-modal").classList.remove("is-visible");
 });
+
 overlay.addEventListener("click", function () {
   document.getElementById("overlay").classList.remove("is-visible");
   document.getElementById("qr-modal").classList.remove("is-visible");
