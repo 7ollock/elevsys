@@ -16,3 +16,14 @@ overlay.addEventListener("click", function () {
   document.getElementById("overlay").classList.remove("is-visible");
   document.getElementById("qr-modal").classList.remove("is-visible");
 });
+
+document.querySelectorAll("#detail-tabs>li").forEach((el, index) =>
+  el.addEventListener("click", () => {
+    document
+      .querySelector("#detail-container>.active-detail")
+      .classList.remove("active-detail");
+    document
+      .querySelector(`#detail-container>:nth-child(${index + 1})`)
+      .classList.add("active-detail");
+  })
+);

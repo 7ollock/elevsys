@@ -177,48 +177,52 @@ body {
   margin-top: 3rem;
 }
 
-#wrapper #main .art-info .details .detail-nav {
+#wrapper #main .art-info .details #detail-tabs {
   display: flex;
+  flex-wrap: wrap;
 }
 
-#wrapper #main .art-info .details .detail-nav li {
+#wrapper #main .art-info .details #detail-tabs li {
   list-style: none;
   margin-right: 3rem;
-  font-size: 1.6rem;
+  cursor: pointer;
 }
 
-#wrapper #main .art-info .details .detail-nav li a {
-  color: var(--black);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#wrapper #main .art-info .details .detail-nav li a:hover {
-  color: var(--grey-1);
-}
-
-#wrapper #main .art-info .details .detail-nav li .active {
-  color: var(--grey-1);
-}
-
-#wrapper #main .art-info .details .origin-details-nav {
+#wrapper #main .art-info .details #detail-container > div {
+  display: none;
   margin-top: 1rem;
-  display: flex;
 }
 
-#wrapper #main .art-info .details .origin-details-nav .item {
+#wrapper #main .art-info .details #detail-container > div.active-detail {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-full {
+  margin-top: 2rem;
+}
+
+#wrapper
+  #main
+  .art-info
+  .details
+  #detail-container
+  .active-detail
+  .record-titles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#wrapper #main .art-info .details #detail-container .active-detail .item {
   display: flex;
   align-items: center;
   margin-right: 3rem;
 }
 
-#wrapper #main .art-info .details .origin-details-nav .item p {
+#wrapper #main .art-info .details #detail-container .active-detail .item p {
   margin-left: 1rem;
   color: var(--pink);
   font-weight: 500;
-}
-#wrapper #main .art-info .details .origin-details-content {
-  margin-top: 2rem;
 }
 
 #wrapper #main .appraise-btn {
@@ -298,7 +302,48 @@ body {
   pointer-events: auto;
 }
 
-@media only screen and (max-width: 500px) {
+/* Table */
+
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 2rem;
+}
+
+table th,
+table td {
+  text-align: left;
+}
+
+table td {
+  padding: 1.2rem 0;
+}
+
+table th {
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--grey-1);
+}
+
+table .table-btn {
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+table .up {
+  color: #90be6d;
+}
+
+table .down {
+  color: #f94144;
+}
+
+@media only screen and (max-width: 600px) {
   #wrapper #sidebar {
     display: none;
   }
@@ -363,50 +408,111 @@ body {
   }
 
   #wrapper #main .art-info .header .art-summary .summary-item p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
 
   #wrapper #main .art-info .details {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
-  #wrapper #main .art-info .details .detail-nav {
-    flex-wrap: wrap;
-  }
-
-  #wrapper #main .art-info .details .detail-nav li {
+  #wrapper #main .art-info .details #detail-tabs li {
     margin-right: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-top: 0.5rem;
+    font-weight: 500;
   }
 
-  #wrapper #main .art-info .details .origin-details-nav {
+  #wrapper
+    #main
+    .art-info
+    .details
+    #detail-container
+    .active-detail
+    .record-titles {
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
   }
 
-  #wrapper #main .art-info .details .origin-details-nav .item {
+  #wrapper
+    #main
+    .art-info
+    .details
+    #detail-container
+    .active-detail
+    .record-titles
+    .item {
     display: flex;
     align-items: center;
     margin-right: 2rem;
     margin-top: 0.5rem;
   }
 
-  #wrapper #main .art-info .details .origin-details-nav .item p {
+  #wrapper
+    #main
+    .art-info
+    .details
+    #detail-container
+    .active-detail
+    .record-titles
+    .item
+    p {
     font-size: 1.4rem;
   }
-  #wrapper #main .art-info .details .origin-details-content {
+  #wrapper #main .art-info .details .info-full {
     margin-top: 1rem;
   }
 
-  #wrapper #main .art-info .details .origin-details-content p {
-    font-size: 1.3rem;
+  #wrapper #main .art-info .details .info-full p {
+    font-size: 1.4rem;
   }
 
   #wrapper #main .appraise-btn {
     float: left;
     margin: 2rem 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
   }
 }
